@@ -1,0 +1,254 @@
+@font-face {
+  font-family: 'NanumBarunGothic';
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumBarunGothic/NanumBarunGothicWeb.eot);
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumBarunGothic/NanumBarunGothicWeb.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumBarunGothic/NanumBarunGothicWeb.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumBarunGothic/NanumBarunGothicWeb.ttf) format("truetype");
+}
+a:-webkit-any-link{
+  text-decoration: none;
+  color: #595959;
+}
+a>div:link, a>div:visited {
+  text-decoration: none;
+  color: #595959;
+}
+/* a>div:hover, a>div:active{
+  border: none;
+  text-decoration: none;
+  color: #8AE9FF;
+} */
+
+hr{
+  margin: 0px;
+  border: 0;
+  height: 1px;
+  background-color: #8AE9FF;
+}
+img{
+  /*아래 코드는 드래그 방지용*/
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+}
+body{
+  display: flex;
+  height: 100vh;
+  align-items:center;
+  justify-content: space-between;
+  font-family: 'NanumBarunGothic';
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+    /*아래 코드는 드래그 방지용*/
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+}
+body::-webkit-scrollbar
+{display: none;}
+
+#container{
+  flex-direction: column;
+  display: flex;
+  width: 92%;
+  justify-content: center;
+}
+.font-ctrl{font-size: 18px;}
+#userinfo {
+  display: flex;
+  margin: 42px 0;
+  border-radius: 25px;
+  width: 100%;
+  height: 100px;
+  border: 1px solid #CCCCCC;
+}
+img#userimg{
+  max-width: 72px;
+  clip-path: circle(36px  at center);
+  margin: 0 30px 0 15px;
+}
+#user{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#user>h2{
+  margin: 0;
+}
+#userinfo > h2{margin: 0px; color: #595959;}
+#user>p{
+  margin: 0px;
+  color: #B4B4B4;
+}
+.section{
+  height: 60px;
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  color: #595959;
+}
+#alarm{
+  display: flex;
+  justify-content: space-between;
+}
+input[type="checkbox"]{
+  appearance: none;
+}
+#push_alram {
+  cursor: pointer;
+  position: relative;
+  border: 2px solid #BDF3FF;
+  border-radius: 35px;
+  width: 75px;
+  height: 40px;
+}
+label{
+  display: flex;
+  align-items: center;
+}
+#push_alram::before {
+  content: "";
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  transform: translateY(-50%) scale(0.8);
+  background-color: #BDF3FF;
+  left: 0;
+  top: 50%;
+  transition: left 180ms linear;
+}
+#push_alram:checked::before {
+  background-color: white;
+  left: 48%;
+}
+#push_alram:checked {
+  background-color: #BDF3FF;
+  border-color: #8AE9FF;
+}
+
+footer{
+  z-index: 2;
+  text-align: center;
+  width: 100%;
+  height: 80px;
+  padding: 0px;
+  box-sizing:border-box;
+  color: #595959;
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+#tohome {
+  width: auto;
+  height: 45px;
+  margin-top: 10px;
+}
+
+
+#info2 {
+  color: black;
+  font-size: 16px;
+}
+
+#pt3 {
+  margin-bottom: 0px;
+  color: black;
+}
+
+#pt2 {
+  margin-bottom: 0px;
+  color: black;
+}
+
+#pt1 {
+  color: black;
+  margin-bottom: 30px;
+}
+
+
+.circleBtn{
+  display: inline-block;
+  vertical-align: middle;
+  margin-top:0px;
+  margin-right: 10px;
+}
+/* 버튼 스타일 */
+.custom-button {
+  padding: 10px 20px;
+  background-color: white;
+  color: white;
+  border: 2px solid #8AE9FF;
+  border-radius: 30px;
+  position: relative;
+  height: 35px;
+  width: 75px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* 활성화된 버튼의 배경색 */
+.custom-button.active {
+  background-color: #007bff;
+}
+.custom-button.active .circle-icon {
+  right: 5px;
+}
+/* 동그라미 아이콘 스타일 */
+.circle-icon {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #8AE9FF;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  color: #007bff;
+  position: absolute;
+  top: 50%;
+  right: 40px;
+  transform: translateY(-50%);
+  transition: right 0.3s ease;
+}
+
+
+
+/* 로그아웃 버튼 */
+#logout {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: white;
+  color: #8AE9FF;
+  font-weight: bold;
+  font-size: 15px;
+  border: 2px solid #8AE9FF;
+  border-radius: 30px;
+  position: relative;
+  height: 40px;
+  width: 100px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 30px;
+  font-family: 'NanumBarunGothic';
+
+}
+
+#logout.active {
+  background-color: #007bff;
+}
+
+#logout img{
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+
+#inside_container {width: 85%;justify-content: center; margin: 0 auto;}
+#clean_eat {display: flex; flex-direction: column;align-items: center;}
+#clean_eat> *{display:flex}
+
+#info_img{flex-direction: column; align-items: center;}
+#info_img>img{display:flex; width: 50%; margin: 10px;}
